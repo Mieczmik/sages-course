@@ -1,0 +1,15 @@
+sposoby wrzucania pliku csv do colaba:
+1.
+from google.colab import drive
+drive.mount('/content/gdrive')
+!ls
+# muicie kliknac w ten link co was prosi, przejść przez wasze konto google i wkleić kod autoryzacyjny w wyskakujące okienko wtedy powinno wszystko działać.
+import pandas as pd 
+df=pd.read_csv('gdrive/My Drive/Mall_Customers.csv')
+# taka sciezka jezeli jestescie na waszym dysku Google w głównym katalogu, tzn nie potworzyliście żadnych podkatalogów, zakładek itd.
+2.
+from google.colab import files
+uploaded = files.upload()
+# wybrać plik z waszego komputera, a potem podac jego nazwe ja podaje roboczo tak jak nazywał się ten nasz zbiór:
+import  io
+data = pd.read_csv(io.BytesIO(uploaded['Mall_Customers.csv']), index_col = 'CustomerID')
