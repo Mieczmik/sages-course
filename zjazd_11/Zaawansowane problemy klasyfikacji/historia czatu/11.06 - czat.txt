@@ -1,0 +1,38 @@
+09:13:37 Od  Sages Trener5  do  Wszyscy:
+	https://drive.google.com/drive/folders/11wjMvftVb5X4LqZE_ob-coGachOycwKD
+10:01:07 Od  Sages Trener5  do  Wszyscy:
+	https://colab.research.google.com/drive/14-1OSsGhMfRBPQLkHABfdwYNImkRNvvP
+10:15:02 Od  Sages Trener5  do  Wszyscy:
+	10.30
+10:28:26 Od  Mateusz Wuchnicki  do  Sages Trener5(Bezpośrednia wiadomość):
+	Cześć, nie wiem czy była sprawdzana obecność. 	Miałem wcześniej problemy techniczne, ale już jestem na zajęciach.
+11:04:02 Od  Sages Trener5  do  Wszyscy:
+	https://docs.google.com/spreadsheets/d/1BpeelVU_rHxtfGhBULHl42sAjuLqYO0l/edit#gid=452001616
+11:04:27 Od  Sages Trener5  do  Wszyscy:
+	Zad.1. Zapoznaj się z kodem i colabem oraz sprobuj wykonac klasyfikacje na zbiorze breast_cancer.csv. Zakoduj lub usun znak zapytania w kolumnie bare_nuclei.	Wypróuj 2 znane  CI pojedyncze klasyfikatory oraz BaggingClassifier. Jako rezultat wyświetl f1_score dla wszystkich algorytmów.
+11:14:11 Od  Anna Krysa  do  Sages Trener5(Bezpośrednia wiadomość):
+	Mam pytanie: w funkcji load_dataset parameter class_column co oznacza?
+11:16:23 Od  Anna Krysa  do  Sages Trener5(Bezpośrednia wiadomość):
+	już rozumiem , dziękuję
+12:10:40 Od  Sages Trener5  do  Wszyscy:
+	Zad.2. Wykonaj random forest na tym samym zbiorze danych co w zadaniu 1 (breast_cancer.csv) i zwróc uwagę na liczbe estimatorów i parametry typowo drzewiaste (min_samples_split, min_samples_leaf, max_depth, criterion) - sprobuj wybrac mozliwie najlepsze. Jako rezultat zapisz f1_score na zb testowym oraz sredni wynik z testowych score crooss walidacji (np.mean(cross_validate_rf['test_score']))
+12:58:23 Od  Sages Trener5  do  Wszyscy:
+	Zad.3. Uzyj zbioru glass i wykonaj na nim uczenie wszystkimi poznanymi (gradient boosting, ada boost, random forest) dziś algorytmami, poustawiaj parametry dla tych algorytmów jak również dla estymatorów bazowych np. SVM(C=10, gamma=0.001), tak aby osiągnąc możliwe najlepszy f1_score, mean(cv_test_score). Zapisz wyniki dla najlepszego.
+13:43:48 Od  Sages Trener5  do  Wszyscy:
+	14.30
+13:43:54 Od  Sages Trener5  do  Wszyscy:
+	koniec przerwy
+14:39:58 Od  Sages Trener5  do  Wszyscy:
+	https://xgboost.readthedocs.io/en/stable/
+15:02:05 Od  Sages Trener5  do  Wszyscy:
+	https://lightgbm.readthedocs.io/en/latest/Python-Intro.html   microsoftowa wersja xgboost
+15:07:06 Od  Sages Trener5  do  Wszyscy:
+	Zad.4.	Użyj funkcji load_dataset i prepare_dataset, aby wczytaj zbiór glasses, dokonaj jego standaryzacji (StandardScaler()), i naucz algorytm xgboost na tych danych (zb treningowy min 80%). Spróbuj zminimalizowac przeuczenie się algorytmu (parametry do ustawienia w prezentacji). Jako wynik końcowy wyświetl: gini na zb treningowym i na zb testowym
+15:08:30 Od  Sages Trener5  do  Wszyscy:
+	do Giniego funkcje:		def create_measures(y,y_pred): 	    score_test = roc_auc_score(y, y_pred)	    Gini_index = 2*score_test - 1	    	    d = {'AUC': [round(score_test,4)], 'GINI': [round(Gini_index,4)]}	    d = pd.DataFrame.from_dict(d)	    return d		def calculating_metrics(X_train, X_test, X_val, y_train, y_test, y_val):	    train = create_measures(y_train,model.predict_proba(X_train)[:, 1])	    test = create_measures(y_test,model.predict_proba(X_test)[:, 1])	    val = create_measures(y_val,model.predict_proba(X_val)[:, 1]) 		    measures =  pd.concat([train,test,val]).set_index([pd.Index(['TRAIN', 'TEST', 'VAL'])]) 	    	    return measures
+15:43:32 Od  Sages Trener5  do  Wszyscy:
+	https://colab.research.google.com/drive/14-1OSsGhMfRBPQLkHABfdwYNImkRNvvP#scrollTo=7ir0bP2s9nyx
+15:44:16 Od  Sages Trener5  do  Wszyscy:
+	16 koniec przerwy
+16:24:48 Od  Sages Trener5  do  Wszyscy:
+	Zad.5. Użyj metody GridSearchCV wybierajac zakres hiperparametrów dla modelu Xgboost i SVM (iloczyn liczby wszystkich kombinacji w gridsearch nie powinien przekroczyć 25). Wykonaj to na zbiorze breast_cancer.csv używając funkcji prepare_dataset, replace (aby pozbyć się '?') oraz standard_scaler aby przeskalować dane (patrz skrypt Zespoły klasyfikatorów), jako odp zapisz Gini dla SVM i Gini dla Xgboost z najlepszymi paraemtrami zwróconymi przez GridSearchCV. Zwróć na czas wykonywania.

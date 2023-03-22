@@ -1,0 +1,46 @@
+09:12:16 Od  Sages Trener5  do  Wszyscy:
+	https://drive.google.com/drive/folders/1q8UYYkznNouDor03-3QXQPuXnkKBME-A
+09:19:07 Od  Sages Trener5  do  Wszyscy:
+	https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html
+09:20:36 Od  Sages Trener5  do  Wszyscy:
+	http://hyperopt.github.io/hyperopt/
+09:39:11 Od  Sages Trener5  do  Wszyscy:
+	Zad.6 Wykonaj klasyfikacje na zbiorze glasses, używając metod GridSearchCV i RandomizedSearchCV ma ustawiać w sposób automatyczny poniższe parametry:subsample, colsample_bytree, colsample_bylevel, max_deltastep, alfa, lambda, n_estimators, max_depth,learning_rate. Która metoda daje lepsze f1_score na zb testowym?
+09:39:16 Od  Sages Trener5  do  Wszyscy:
+	https://colab.research.google.com/drive/1MevAhtXbuTFSzHj5GdwDdK1P960YyU4I#scrollTo=uFswvaQo0Ybc
+10:29:29 Od  Sages Trener5  do  Wszyscy:
+	10.45 - koniec przerwy
+11:25:26 Od  Sages Trener5  do  Wszyscy:
+	Z.7. WYkonaj analogiczną prace na zbiorze santander tj. wczytaj go, przeskaluj (StandardScaler lub MinMaxScaler), użyj wszystki powyzszych metod, wybierz 15 najistotniejszych kolumn, uczenie wykonaj z GridSearchCV stworzonym w poprzednim ćwiczeniu oraz algorytmem XGBoost rowniez stworzonym w cwiczeniu poprzednim. 		*   PO wybraniu najistniojeszych cech wykonaj dla nich proces uczenia xgboostem oraz dla wskazanych przez GridSearchCV Parametrów. Jako rezultat zapisz f1_score na zb treningowym i testowym.
+11:48:40 Od  Sages Trener5  do  Wszyscy:
+	https://colab.research.google.com/drive/1OZ9RLQNvrGy37hfdNsb4XQU2hf77FP4g#scrollTo=yD_rxeJiOIgQ
+12:23:34 Od  Sages Trener5  do  Wszyscy:
+	https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html
+12:42:46 Od  Sages Trener5  do  Wszyscy:
+	Z.8. Na zbiorze glasses wykonać zrównoważnie klas  a nastepnie użyć metody Random Forest albo Xgboost zapisze wynik f1_score na zbiorze testowym.*kursywa*
+13:43:34 Od  Sages Trener5  do  Wszyscy:
+	14.30 - koniec przerwy
+14:58:06 Od  Sages Trener5  do  Wszyscy:
+	https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/
+14:59:12 Od  Sages Trener5  do  Wszyscy:
+	https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.KMeansSMOTE.html
+15:14:28 Od  Sages Trener5  do  Wszyscy:
+	Case study cz.1		*   Wczytaj dane telecom_churn, przygotuj je tzn 			*   usun braki w danych lub zamień jakąs wartością może być srednia	*   usun lub zamień na wartość średnia wartości odstające			*  Jezeli potrzebujesz to użyj StandarScaler i Label Enocder	*   Użyj pakiet resample po to aby przeprowadzić Oversampling				*   Wykonaj uczenie dwoma algorytmami (jeden z rodziny: drzewo decyzyjne, svm, logistic regression, drugi: random forest, ada boost, xgboost	*   Wybierz najlepszy i zapisz jako odp jego precision i recall na zbiorze testowym
+15:14:39 Od  Sages Trener5  do  Wszyscy:
+	Case study cz.2		*   Użyj metody SMOTE (spróbuj wykonać kilka testów z różną liczbą sąsiadów)			*   Przeprowadź grid search dla algorytmow które zaimplementujesz w poprzednim punkcie (zwróć uwagę na czas)			*   Wykonaj uczenie na 3 algorytmach (2 mogą być te same co w pkt. 1, a 3 jeden z poniższej grupy gradient_boosting, lightgbm		Jako wynik zapisz f1_score na zbiorze testowym dla najlepszego algorytmu
+15:15:15 Od  Piotr Fudali  do  Wszyscy:
+	Ja dzisiaj nie mam dostępu do komputera, wiec tylko slucham
+15:15:24 Od  Piotr Fudali  do  Wszyscy:
+	To odpuszczę grupy
+15:15:41 Od  KK  do  Wszyscy:
+	Ja muszę wcześniej wyjść niestety :(
+15:16:48 Od  Sages Trener5  do  Wszyscy:
+	gr.1. Adam O,  Piotr Fudali, Michał Sikora, Anna Krysa
+15:18:14 Od  Sages Trener5  do  Wszyscy:
+	gr.2. agnieszka, Daniel Kiejko, KK, pawel nader1
+15:18:55 Od  Sages Trener5  do  Wszyscy:
+	gr.3 Mateusz Siuda, Mateusz Wuchnicki
+15:19:28 Od  Sages Trener5  do  Wszyscy:
+	gr.4 Aleksander Pyta,Aneta Kowalik, Mikolaj Miecznikowski
+15:57:51 Od  Sages Trener5  do  Wszyscy:
+	16.10 - koniec przerwy

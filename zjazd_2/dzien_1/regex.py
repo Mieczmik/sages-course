@@ -2,8 +2,8 @@
 import re
 
 # importowanie modulow
-from tests import test_count
-from tests.test_count import sum_num
+# from tests import test_count
+# from tests.test_count import sum_num
 
 # test_count.sum_num(1,2)
 # sum_num(1,)
